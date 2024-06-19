@@ -86,3 +86,15 @@ Ensure the browser does not remember the details of the user after logging out.
 Expand your application to allow a logged-in user to add new blogs:
 
 ![bloglist4](./assets/bloglist4.png)
+
+### 5.4: Blog List Frontend, step 4
+
+Implement notifications that inform the user about successful and unsuccessful operations at the top of the page. For example, when a new blog is added, the following notification can be shown:
+
+![bloglist5](./assets/bloglist5.png)
+
+Failed login can show the following notification:
+
+![bloglist6](./assets/bloglist6.png)
+
+The notifications must be visible for a few seconds. It is not compulsory to add colors.
