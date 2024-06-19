@@ -72,3 +72,11 @@ User details of the logged-in user do not have to be saved to the local storage 
   )
 }
 ```
+
+### 5.2: Blog List Frontend, step 2
+
+Make the login 'permanent' by using the local storage. Also, implement a way to log out.
+
+![bloglist3](./assets/bloglist3.png)
+
+Ensure the browser does not remember the details of the user after logging out.
