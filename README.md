@@ -80,3 +80,9 @@ Make the login 'permanent' by using the local storage. Also, implement a way to 
 ![bloglist3](./assets/bloglist3.png)
 
 Ensure the browser does not remember the details of the user after logging out.
+
+### 5.3: Blog List Frontend, step 3
+
+Expand your application to allow a logged-in user to add new blogs:
+
+![bloglist4](./assets/bloglist4.png)
