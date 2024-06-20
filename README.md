@@ -98,3 +98,19 @@ Failed login can show the following notification:
 ![bloglist6](./assets/bloglist6.png)
 
 The notifications must be visible for a few seconds. It is not compulsory to add colors.
+
+## Exercises 5.5.-5.11
+
+### 5.5 Blog List Frontend, step 5
+
+Change the form for creating blog posts so that it is only displayed when appropriate. Use functionality similar to what was shown [earlier in this part of the course material](https://fullstackopen.com/en/part5/props_children_and_proptypes#displaying-the-login-form-only-when-appropriate). If you wish to do so, you can use the _Togglable_ component defined in part 5.
+
+By default the form is not visible
+
+![bloglist7](./assets/bloglist7.png)
+
+It expands when button _create new blog_ is clicked
+
+![bloglist8](./assets/bloglist8.png)
+
+The form hides again after a new blog is created.
