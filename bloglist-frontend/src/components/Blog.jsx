@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, updateBlogLikes }) => {
   const [detailsVisible, setDetailsVisible] = useState(false);
 
   const blogStyle = {
@@ -15,10 +15,19 @@ const Blog = ({ blog }) => {
     setDetailsVisible(!detailsVisible);
   };
 
+  const handleLike = async () => {
+    const updatedBlog = {
+      ...blog,
+      likes: blog.likes + 1,
+      user: blog.user.id,
+    };
+    await updateBlogLikes(blog.id, updatedBlog);
+  };
+
   return (
     <div style={blogStyle}>
       <div>
-        {blog.title} {blog.author}{' '}
+        {blog.title} {blog.author}
         <button onClick={toggleDetails}>
           {detailsVisible ? 'hide' : 'view'}
         </button>
@@ -27,7 +36,7 @@ const Blog = ({ blog }) => {
         <div>
           <p>{blog.url}</p>
           <p>
-            {blog.likes} likes <button>like</button>
+            {blog.likes} likes <button onClick={handleLike}>like</button>
           </p>
           <p>added by {blog.user.name}</p>
         </div>
