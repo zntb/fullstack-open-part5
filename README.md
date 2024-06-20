@@ -194,3 +194,17 @@ You would have to make an HTTP PUT request to the address _/api/blogs/5a43fde2cb
 ```
 
 The backend has to be updated too to handle the user reference.
+
+### 5.9: Blog List Frontend, step 9
+
+We notice that something is wrong. When a blog is liked in the app, the name of the user that added the blog is not shown in its details:
+
+![bloglist10](./assets/bloglist10.png)
+
+When the browser is reloaded, the information of the person is displayed. This is not acceptable, find out where the problem is and make the necessary correction.
+
+Of course, it is possible that you have already done everything correctly and the problem does not occur in your code. In that case, you can move on.
+
+### 5.10: Blog List Frontend, step 10
+
+Modify the application to sort the blog posts by the number of likes. The Sorting can be done with the array [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method.
