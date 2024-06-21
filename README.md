@@ -220,3 +220,11 @@ Your application could look something like this:
 The confirmation dialog for deleting a blog post is easy to implement with the [window.confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) function.
 
 Show the button for deleting a blog post only if the blog post was added by the user.
+
+## Exercise 5.12
+
+### 5.12: Blog List Frontend, step 12
+
+Define PropTypes for one of the components of your application, and add ESlint to the project. Define the configuration according to your liking. Fix all of the linter errors.
+
+Vite has installed ESlint to the project by default, so all that's left for you to do is define your desired configuration in the _.eslintrc.cjs_ file.
