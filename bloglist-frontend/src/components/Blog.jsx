@@ -44,11 +44,11 @@ const Blog = ({ blog, updateBlogLikes, removeBlog, user }) => {
       </div>
       {detailsVisible && (
         <div className="blog-details">
-          <p>{blog.url}</p>
-          <p>
+          <p className="blog-url">{blog.url}</p>
+          <p className="blog-likes">
             {blog.likes} likes <button onClick={handleLike}>like</button>
           </p>
-          <p>added by {blog.user.name}</p>
+          <p className="blog-user">added by {blog.user.name}</p>
           {user.username === blog.user.username && (
             <button onClick={handleRemove}>remove</button>
           )}
@@ -66,3 +66,4 @@ Blog.propTypes = {
 };
 
 export default Blog;
+
