@@ -228,3 +228,10 @@ Show the button for deleting a blog post only if the blog post was added by the 
 Define PropTypes for one of the components of your application, and add ESlint to the project. Define the configuration according to your liking. Fix all of the linter errors.
 
 Vite has installed ESlint to the project by default, so all that's left for you to do is define your desired configuration in the _.eslintrc.cjs_ file.
+
+## Exercises 5.13.-5.16
+
+5.13: Blog List Tests, step 1
+Make a test, which checks that the component displaying a blog renders the blog's title and author, but does not render its URL or number of likes by default.
+
+Add CSS classes to the component to help the testing as necessary.
