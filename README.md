@@ -231,7 +231,12 @@ Vite has installed ESlint to the project by default, so all that's left for you 
 
 ## Exercises 5.13.-5.16
 
-5.13: Blog List Tests, step 1
+### 5.13: Blog List Tests, step 1
+
 Make a test, which checks that the component displaying a blog renders the blog's title and author, but does not render its URL or number of likes by default.
 
 Add CSS classes to the component to help the testing as necessary.
+
+### 5.14: Blog List Tests, step 2
+
+Make a test, which checks that the blog's URL and number of likes are shown when the button controlling the shown details has been clicked.
