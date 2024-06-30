@@ -9,7 +9,8 @@
     "test": "cross-env NODE_ENV=test node --test --test-concurrency=1",
     "build:ui": "rm -rf dist && cd ../bloglist-frontend && npm run build && cp -r dist ",
     "build:dev": "@powershell Remove-Item -Recurse -Force dist && cd ../bloglist-frontend && npm run build && @powershell Copy-Item dist -Recurse ../bloglist-backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "start:test": "cross-env NODE_ENV=test node index.js"
   },
   "keywords": [],
   "author": "",

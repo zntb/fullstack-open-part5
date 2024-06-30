@@ -2,6 +2,8 @@
 
 **All exercises are saved in a separate commit.**
 
+[Playwright tests repository for Exercises 5.17.-5.23](https://github.com/zntb/blog-list-E2E)
+
 ## Exercises 5.1.-5.4
 
 We will now create a frontend for the blog list backend we created in the last part. You can use [this application](https://github.com/fullstack-hy2020/bloglist-frontend) from GitHub as the base of your solution. You need to connect your backend with a proxy as shown in [part 3](https://fullstackopen.com/en/part3/deploying_app_to_internet#proxy).
@@ -248,3 +250,29 @@ Make a test, which ensures that if the _like_ button is clicked twice, the event
 ### 5.16: Blog List Tests, step 4
 
 Make a test for the new blog form. The test should check, that the form calls the event handler it received as props with the right details when a new blog is created.
+
+## Exercises 5.17.-5.23
+
+In the last exercises of this part, let's do some E2E tests for the blog application. The material above should be enough to do most of the exercises. However, you should definitely read Playwright's [documentation](https://playwright.dev/docs/intro) and [API description](https://playwright.dev/docs/api/class-playwright), at least the sections mentioned at the end of the previous chapter.
+
+### 5.17: Blog List End To End Testing, step 1
+
+Create a new npm project for tests and configure Playwright there.
+
+Make a test to ensure that the application displays the login form by default.
+
+The body of the test should be as follows:
+
+```js
+const { test, expect, beforeEach, describe } = require('@playwright/test')
+
+describe('Blog app', () => {
+  beforeEach(async ({ page }) => {
+    await page.goto('http://localhost:5173')
+  })
+
+  test('Login form is shown', async ({ page }) => {
+    // ...
+  })
+})
+```
