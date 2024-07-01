@@ -12,7 +12,7 @@ const Notification = ({ message, type }) => {
     marginBottom: '10px',
   };
 
-  return <div style={notificationStyle}>{message}</div>;
+  return <div data-testid="notification" style={notificationStyle}>{message}</div>;
 };
 
 Notification.propTypes = {
@@ -21,3 +21,4 @@ Notification.propTypes = {
 };
 
 export default Notification;
+
