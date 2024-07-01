@@ -2,7 +2,7 @@
 
 **All exercises are saved in a separate commit.**
 
-[Playwright tests repository for Exercises 5.17.-5.23](https://github.com/zntb/blog-list-E2E)
+[Playwright tests repository for Exercises 5.17.-5.23](https://github.com/zntb/blog-list-e2e)
 
 ## Exercises 5.1.-5.4
 
@@ -276,3 +276,37 @@ describe('Blog app', () => {
   })
 })
 ```
+
+### 5.18: Blog List End To End Testing, step 2
+
+Do the tests for login. Test both successful and failed login. For tests, create a user in the `beforeEach` block.
+
+The body of the tests expands as follows
+
+```js
+const { test, expect, beforeEach, describe } = require('@playwright/test')
+
+describe('Blog app', () => {
+  beforeEach(async ({ page, request }) => {
+    // empty the db here
+    // create a user for the backend here
+    // ...
+  })
+
+  test('Login form is shown', async ({ page }) => {
+    // ...
+  })
+
+  describe('Login', () => {
+    test('succeeds with correct credentials', async ({ page }) => {
+      // ...
+    })
+
+    test('fails with wrong credentials', async ({ page }) => {
+      // ...
+    })
+  })
+})
+```
+
+The `beforeEach` block must empty the database using, for example, the reset method we used in the [material](https://fullstackopen.com/en/part5/end_to_end_testing_playwright#controlling-the-state-of-the-database).
