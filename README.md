@@ -2,7 +2,7 @@
 
 **All exercises are saved in a separate commit.**
 
-[Playwright tests repository for Exercises 5.17.-5.23](https://github.com/zntb/blog-list-e2e)
+**[Playwright tests repository for Exercises 5.17.-5.23](https://github.com/zntb/blog-list-e2e)**
 
 ## Exercises 5.1.-5.4
 
@@ -144,7 +144,7 @@ const Blog = ({ blog }) => {
   const blogStyle = {
     paddingTop: 10,
     paddingLeft: 2,
-    border: 'solid',
+    border: "solid",
     borderWidth: 1,
     marginBottom: 5,
   };
@@ -264,17 +264,17 @@ Make a test to ensure that the application displays the login form by default.
 The body of the test should be as follows:
 
 ```js
-const { test, expect, beforeEach, describe } = require('@playwright/test')
+const { test, expect, beforeEach, describe } = require("@playwright/test");
 
-describe('Blog app', () => {
+describe("Blog app", () => {
   beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:5173')
-  })
+    await page.goto("http://localhost:5173");
+  });
 
-  test('Login form is shown', async ({ page }) => {
+  test("Login form is shown", async ({ page }) => {
     // ...
-  })
-})
+  });
+});
 ```
 
 ### 5.18: Blog List End To End Testing, step 2
@@ -284,29 +284,29 @@ Do the tests for login. Test both successful and failed login. For tests, create
 The body of the tests expands as follows
 
 ```js
-const { test, expect, beforeEach, describe } = require('@playwright/test')
+const { test, expect, beforeEach, describe } = require("@playwright/test");
 
-describe('Blog app', () => {
+describe("Blog app", () => {
   beforeEach(async ({ page, request }) => {
     // empty the db here
     // create a user for the backend here
     // ...
-  })
+  });
 
-  test('Login form is shown', async ({ page }) => {
+  test("Login form is shown", async ({ page }) => {
     // ...
-  })
+  });
 
-  describe('Login', () => {
-    test('succeeds with correct credentials', async ({ page }) => {
+  describe("Login", () => {
+    test("succeeds with correct credentials", async ({ page }) => {
       // ...
-    })
+    });
 
-    test('fails with wrong credentials', async ({ page }) => {
+    test("fails with wrong credentials", async ({ page }) => {
       // ...
-    })
-  })
-})
+    });
+  });
+});
 ```
 
 The `beforeEach` block must empty the database using, for example, the reset method we used in the [material](https://fullstackopen.com/en/part5/end_to_end_testing_playwright#controlling-the-state-of-the-database).
@@ -316,15 +316,15 @@ The `beforeEach` block must empty the database using, for example, the reset met
 Create a test that verifies that a logged in user can create a blog. The body of the test may look like the following
 
 ```js
-describe('When logged in', () => {
+describe("When logged in", () => {
   beforeEach(async ({ page }) => {
     // ...
-  })
+  });
 
-  test('a new blog can be created', async ({ page }) => {
+  test("a new blog can be created", async ({ page }) => {
     // ...
-  })
-})
+  });
+});
 ```
 
 The test should ensure that the created blog is visible in the list of blogs.
