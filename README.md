@@ -332,3 +332,19 @@ The test should ensure that the created blog is visible in the list of blogs.
 ### 5.20: Blog List End To End Testing, step 4
 
 Do a test that makes sure the blog can be liked.
+
+### 5.21: Blog List End To End Testing, step 5
+
+Make a test that ensures that the user who added the blog can delete the blog. If you use the `window.confirm` dialog in the delete operation, you may have to Google how to use the dialog in the Playwright tests.
+
+### 5.22: Blog List End To End Testing, step 6
+
+Make a test that ensures that only the user who added the blog sees the blog's delete button.
+
+### 5.23: Blog List End To End Testing, step 7
+
+Do a test that ensures that the blogs are arranged in the order according to the likes, the blog with the most likes first.
+
+_This task is significantly more challenging than the previous ones._
+
+This was the last task of the section and it's time to push the code to GitHub and mark the completed tasks in the [exercise submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).

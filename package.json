@@ -1,0 +1,16 @@
+{
+  "name": "fullstack-open-part5",
+  "version": "1.0.0",
+  "description": "**All exercises are saved in a separate commit.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-classnames": "^0.7.0",
+    "prettier-plugin-tailwindcss": "^0.6.5"
+  }
+}

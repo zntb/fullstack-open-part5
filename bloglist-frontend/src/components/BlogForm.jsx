@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const BlogForm = ({ createBlog }) => {
-  const [newBlog, setNewBlog] = useState({ title: '', author: '', url: '' });
+  const [newBlog, setNewBlog] = useState({ title: "", author: "", url: "" });
 
   const addBlog = (event) => {
     event.preventDefault();
     createBlog(newBlog);
-    setNewBlog({ title: '', author: '', url: '' });
+    setNewBlog({ title: "", author: "", url: "" });
   };
 
   const handleBlogChange = ({ target }) => {

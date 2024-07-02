@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Blog = ({ blog, updateBlogLikes, removeBlog, user }) => {
   const [detailsVisible, setDetailsVisible] = useState(false);
@@ -7,7 +7,7 @@ const Blog = ({ blog, updateBlogLikes, removeBlog, user }) => {
   const blogStyle = {
     paddingTop: 10,
     paddingLeft: 2,
-    border: 'solid',
+    border: "solid",
     borderWidth: 1,
     marginBottom: 5,
   };
@@ -27,7 +27,7 @@ const Blog = ({ blog, updateBlogLikes, removeBlog, user }) => {
 
   const handleRemove = () => {
     const confirmRemove = window.confirm(
-      `Remove blog ${blog.title} by ${blog.author}?`
+      `Remove blog ${blog.title} by ${blog.author}?`,
     );
     if (confirmRemove) {
       removeBlog(blog.id);
@@ -39,7 +39,7 @@ const Blog = ({ blog, updateBlogLikes, removeBlog, user }) => {
       <div className="blog-title-author">
         {blog.title} {blog.author}
         <button onClick={toggleDetails}>
-          {detailsVisible ? 'hide' : 'view'}
+          {detailsVisible ? "hide" : "view"}
         </button>
       </div>
       {detailsVisible && (
@@ -66,4 +66,3 @@ Blog.propTypes = {
 };
 
 export default Blog;
-
