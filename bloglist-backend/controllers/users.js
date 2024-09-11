@@ -29,6 +29,37 @@ usersRouter.get("/", async (req, response) => {
   }
 });
 
+usersRouter.get("/:id", async (req, response) => {
+  try {
+    const user = await User.findById(req.params.id).populate("blogs", [
+      "url",
+      "title",
+      "author",
+    ]);
+
+    if (!user) {
+      return response.status(404).json({ error: "User not found" });
+    }
+
+    const formattedUser = {
+      blogs: user.blogs.map((blog) => ({
+        url: blog.url,
+        title: blog.title,
+        author: blog.author,
+        id: blog._id,
+      })),
+      username: user.username,
+      name: user.name,
+      id: user._id,
+    };
+
+    response.json(formattedUser);
+  } catch (error) {
+    console.error(error);
+    response.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 usersRouter.post("/", async (request, response, next) => {
   const { username, name, password } = request.body;
 
